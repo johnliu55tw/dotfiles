@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/john/Projects/box-management-context-plus/src/base'
+let g:netrw_dirhist_2='/home/john/Projects/box-simulator2'
+let g:netrw_dirhist_3='/home/john/Projects/box-simulator'
+let g:netrw_dirhist_4='/home/john/Projects/box-management-context-plus/src/boxrepo'
+let g:netrw_dirhist_5='/home/john/Projects/box-management-context-plus/src/boxrepo/tests'
+let g:netrw_dirhist_6='/home/john/Projects/box-management-context-plus/src/rawrepo'
+let g:netrw_dirhist_7='/home/john/Projects/box-simulator-plus/src'
+let g:netrw_dirhist_8='/home/john/.tmuxifier'
+let g:netrw_dirhist_9='/home/john/.config/nvim/plugged/numbers.vim'
