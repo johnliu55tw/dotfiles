@@ -14,7 +14,7 @@ alias mv='mv -iv'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR="nvim"
-export PATH=/home/john/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation" 1
 xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation Button" 2
