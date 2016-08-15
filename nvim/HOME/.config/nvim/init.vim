@@ -6,6 +6,7 @@ Plug 'https://github.com/cespare/vim-toml'
 call plug#end()
 
 set nu
+set ruler
 syntax on
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
