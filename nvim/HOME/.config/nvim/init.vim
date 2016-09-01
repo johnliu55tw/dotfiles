@@ -12,7 +12,6 @@ set ruler
 set termguicolors
 syntax on
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme my-paintbox
 " Highlight the 81 colume
 let &colorcolumn=81
