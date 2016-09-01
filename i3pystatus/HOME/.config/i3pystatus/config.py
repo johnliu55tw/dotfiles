@@ -2,19 +2,13 @@ from i3pystatus import Status
 
 status = Status(
     logfile="/home/john/i3pystatus.log")
-    
 
 # Displays clock like this:
-# Tue 30 Jul 11:59:46 PM KW31
+# Tue 30 Jul 11:59:46 PM KW32
 #                          ^-- calendar week
 status.register("clock",
     format="%Y/%m/%d %T",
     on_leftclick="gsimplecal",)
-
-# Pomodoro plugin
-status.register("pomodoro",
-    sound="/home/john/Sounds/alarm-clock.wav",
-    format="☾ {current_pomodoro}/{total_pomodoro} {time}",)
 
 # Shows pulseaudio default sink volume
 #
@@ -54,5 +48,10 @@ status.register("network",
     interface="wlan0",
     format_up="∿{essid} {quality:03.0f}%",
     on_leftclick="st -e connmanctl")
+
+# Pomodoro plugin
+status.register("pomodoro",
+    sound="/home/john/Sounds/alarm-clock.wav",
+    format="{current_pomodoro}/{total_pomodoro} {time}",)
 
 status.run()
