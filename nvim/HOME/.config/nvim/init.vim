@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'https://github.com/myusuf3/numbers.vim.git'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
+Plug 'https://github.com/lambdatoast/elm.vim.git'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
