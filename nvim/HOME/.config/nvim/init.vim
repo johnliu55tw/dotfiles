@@ -25,7 +25,7 @@ set background=dark
 let &colorcolumn=81
 
 " vim-airline theme "
-let g:airline_theme='lucius'
+let g:airline_theme='kalisi'
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
