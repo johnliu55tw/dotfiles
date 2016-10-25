@@ -1,5 +1,7 @@
 " vim-plug settings
 call plug#begin()
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'https://github.com/myusuf3/numbers.vim.git'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
@@ -19,7 +21,7 @@ syntax on
 
 colorscheme kalisi
 set background=dark
-" Highlight the 81 colume
+" Highlight the 81st column
 let &colorcolumn=81
 
 " vim-airline theme "
@@ -32,3 +34,18 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" Syntastic
+"
+" Default setting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+" Enable flake8 for syntastic (flake8 needs to be installed)
+let g:syntastic_python_checkers = ['flake8']
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
