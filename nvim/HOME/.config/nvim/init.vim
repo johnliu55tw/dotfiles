@@ -6,6 +6,9 @@ Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/lambdatoast/elm.vim.git'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'https://github.com/guns/vim-clojure-static.git'
+Plug 'https://github.com/tpope/vim-fireplace.git'
 Plug 'https://github.com/freeo/vim-kalisi'
 call plug#end()
 
