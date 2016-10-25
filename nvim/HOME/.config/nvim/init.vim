@@ -6,6 +6,7 @@ Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/lambdatoast/elm.vim.git'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'https://github.com/freeo/vim-kalisi'
 call plug#end()
 
 set nu
@@ -13,7 +14,8 @@ set ruler
 set termguicolors
 syntax on
 
-colorscheme my-paintbox
+colorscheme kalisi
+set background=dark
 " Highlight the 81 colume
 let &colorcolumn=81
 
