@@ -53,8 +53,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 " Enable flake8 for syntastic (flake8 needs to be installed)
 let g:syntastic_python_checkers = ['flake8']
+" Shortcuts
+nmap <C-s>r :SyntasticReset<CR>
+nmap <C-s>c :SyntasticCheck<CR>
 
 " Buffer management shortcuts
-nmap <C-b>n :bnext<CR>
-nmap <C-b>p :bprevious<CR>
-nmap <C-b>w :bwipeout<CR>
+set hidden
+nmap <C-n><C-n> :bnext<CR>
+nmap <C-n>n :bnext<CR>
+nmap <C-n>p :bprevious<CR>
+nmap <C-n>q :bwipeout<CR>
