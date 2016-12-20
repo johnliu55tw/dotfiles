@@ -12,6 +12,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'https://github.com/guns/vim-clojure-static.git'
 Plug 'https://github.com/tpope/vim-fireplace.git'
 Plug 'https://github.com/freeo/vim-kalisi'
+Plug 'https://github.com/easymotion/vim-easymotion.git'
 call plug#end()
 
 set nu
@@ -63,3 +64,19 @@ nmap <C-n><C-n> :bnext<CR>
 nmap <C-n>n :bnext<CR>
 nmap <C-n>p :bprevious<CR>
 nmap <C-n>q :bwipeout<CR>
+
+" Easy Motion
+let g:EasyMotion_do_mapping = 0 " Disable defautl mappings
+let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+
+" 'f' for Search first 2 characters
+nmap f <Plug>(easymotion-overwin-w)
+" 's' for Word motion
+nmap s <Plug>(easymotion-overwin-f2)
+" JK motions: Line motions
+map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>l <Plug>(easymotion-lineforward)
+" Enhanced Search
+map  / <Plug>(easymotion-sn)
