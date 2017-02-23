@@ -15,7 +15,7 @@ PS1='[\u@\h \W]\$ '
 
 export EDITOR="nvim"
 export PATH=$HOME/bin:$PATH
-export TERM="xterm-256color"
+export TERM="screen-256color"
 
 xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation" 1
 xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation Button" 2
