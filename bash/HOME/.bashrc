@@ -17,12 +17,8 @@ export EDITOR="nvim"
 export PATH=$HOME/bin:$PATH
 export TERM="screen-256color"
 
-xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation" 1
-xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation Button" 2
-xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Evdev Wheel Emulation Timeout" 200
-
 # Git autocompletion script
-source /home/john/scripts/git-completion.bash
+source $HOME/scripts/git-completion.bash
 
-# Setup the tmuxifier
-eval "$(tmuxifier init -)"
+# Rust dev env
+source $HOME/.cargo/env
