@@ -170,6 +170,8 @@ exec --no-startup-id fcitx
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Redshift
 exec --no-startup-id redshift-gtk
+# dunst
+exec --no-startup-id dunst
 
 # Disable title bar
 for_window [class="^.*"] border pixel 2
