@@ -24,6 +24,18 @@ colorscheme kalisi
 set background=dark
 " Highlight the 81st column
 let &colorcolumn=81
+" Set the leader key to z
+let mapleader='z'
+
+" " Copy to clipboard
+vnoremap <Leader>y  "+y
+nnoremap <Leader>Y  "+yg_
+nnoremap <Leader>y  "+y
+" " Paste from clipboard
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
 
 " vim-airline
 "
@@ -70,7 +82,6 @@ let g:EasyMotion_do_mapping = 0 " Disable defautl mappings
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
 
 " 'f' for Search first 2 characters
-let mapleader='z'
 nmap f <Plug>(easymotion-overwin-w)
 " 's' for Word motion
 nmap s <Plug>(easymotion-overwin-f2)
