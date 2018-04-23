@@ -13,6 +13,8 @@ Plug 'https://github.com/guns/vim-clojure-static.git'
 Plug 'https://github.com/tpope/vim-fireplace.git'
 Plug 'https://github.com/freeo/vim-kalisi'
 Plug 'https://github.com/easymotion/vim-easymotion.git'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/Yggdroot/indentLine'
 call plug#end()
 
 set nu
