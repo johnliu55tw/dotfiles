@@ -5,14 +5,11 @@ Plug 'scrooloose/syntastic'
 Plug 'https://github.com/myusuf3/numbers.vim.git'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
-Plug 'https://github.com/lambdatoast/elm.vim.git'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'https://github.com/guns/vim-clojure-static.git'
-Plug 'https://github.com/tpope/vim-fireplace.git'
 Plug 'https://github.com/freeo/vim-kalisi'
 Plug 'https://github.com/easymotion/vim-easymotion.git'
+Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/mfukar/robotframework-vim'
 call plug#end()
@@ -31,7 +28,7 @@ let mapleader='z'
 
 " " Copy to clipboard
 vnoremap <Leader>y  "+y
-nnoremap <Leader>Y  "+yg_
+nnoremap <Leader>Y  "+yg
 nnoremap <Leader>y  "+y
 " " Paste from clipboard
 nnoremap <Leader>p "+p
@@ -96,3 +93,5 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>l <Plug>(easymotion-lineforward)
 " Enhanced Search
 map  / <Plug>(easymotion-sn)
+" Disable indentLine in *.json file. See Yggdroot/indentLine/issues/172
+autocmd Filetype json let g:indentLine_enabled = 0
