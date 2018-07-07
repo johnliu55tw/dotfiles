@@ -19,6 +19,3 @@ export TERM="screen-256color"
 
 # Git autocompletion script
 source $HOME/scripts/git-completion.bash
-
-# Rust dev env
-source $HOME/.cargo/env
