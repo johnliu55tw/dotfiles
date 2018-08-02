@@ -12,6 +12,7 @@ Plug 'https://github.com/easymotion/vim-easymotion.git'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/mfukar/robotframework-vim'
+Plug 'benmills/vimux'
 call plug#end()
 
 set nu
@@ -95,3 +96,16 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map  / <Plug>(easymotion-sn)
 " Disable indentLine in *.json file. See Yggdroot/indentLine/issues/172
 autocmd Filetype json let g:indentLine_enabled = 0
+" vimux
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR>
