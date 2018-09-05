@@ -1,6 +1,3 @@
-[user]
-	email = johnliu55tw@gmail.com
-	name = John Liu
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
