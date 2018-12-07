@@ -1,7 +1,7 @@
 " vim-plug settings
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'https://github.com/myusuf3/numbers.vim.git'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
@@ -56,22 +56,16 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-" Syntastic
+" ALE
 "
-" Default setting
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-" Enable flake8 for syntastic (flake8 needs to be installed)
-let g:syntastic_python_checkers = ['flake8']
-" Enable js-standard for syntastic
-let g:syntastic_javascript_checkers = ['standard']
-" Shortcuts
-nmap <C-s>r :SyntasticReset<CR>
-nmap <C-s>c :SyntasticCheck<CR>
+" Enable quickfix
+let g:ale_set_quickfix = 0
+let g:ale_open_list = 1
+" Keyboard shortcuts
+nmap <C-s>s <Plug>(ale_toggle)
+nmap <C-s>j <Plug>(ale_next_wrap)
+nmap <C-s>k <Plug>(ale_previous_wrap)
+nmap <C-s>r <Plug>(ale_reset)
 
 " Buffer management shortcuts
 set hidden
