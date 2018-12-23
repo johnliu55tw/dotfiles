@@ -23,3 +23,9 @@ source $HOME/scripts/git-completion.bash
 
 # fzf
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
+
+# bash-git-prompt
+export GIT_PROMPT_ONLY_IN_REPO=1
+export GIT_PROMPT_FETCH_REMOTE_STATUS=0
+export GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
+[ -f "$HOME/.bash-git-prompt/gitprompt.sh" ] && source "$HOME/.bash-git-prompt/gitprompt.sh"
