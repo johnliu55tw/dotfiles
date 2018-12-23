@@ -62,7 +62,6 @@ nmap <C-n>q :bwipeout<CR>
 " Easy Motion
 let g:EasyMotion_do_mapping = 0 " Disable defautl mappings
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
-
 " 'f' for Search first 2 characters
 nmap f <Plug>(easymotion-overwin-w)
 " 's' for Word motion
@@ -74,8 +73,10 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>l <Plug>(easymotion-lineforward)
 " Enhanced Search
 map  / <Plug>(easymotion-sn)
+
 " Disable indentLine in *.json file. See Yggdroot/indentLine/issues/172
 autocmd Filetype json let g:indentLine_enabled = 0
+
 " vimux
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
@@ -89,3 +90,6 @@ map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
+
+" FZF
+nnoremap <C-p> :FZF<CR>

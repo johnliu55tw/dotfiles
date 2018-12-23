@@ -19,5 +19,5 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/mfukar/robotframework-vim'
 Plug 'benmills/vimux'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '~/.fzf'
 call plug#end()
