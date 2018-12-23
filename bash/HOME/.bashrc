@@ -20,3 +20,6 @@ export TERM="screen-256color"
 
 # Git autocompletion script
 source $HOME/scripts/git-completion.bash
+
+# fzf
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
