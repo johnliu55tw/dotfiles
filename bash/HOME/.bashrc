@@ -18,6 +18,9 @@ export EDITOR="nvim"
 export PATH=$HOME/bin:$PATH
 export TERM="screen-256color"
 
+# Start keychain
+eval $(keychain --eval --quiet id_rsa)
+
 # Git autocompletion script
 source $HOME/scripts/git-completion.bash
 
