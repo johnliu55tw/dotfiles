@@ -46,6 +46,9 @@ set expandtab
 " Enable quickfix
 let g:ale_set_quickfix = 0
 let g:ale_open_list = 1
+let g:ale_keep_list_window_open = 1
+" Keep the sign gutter open
+let g:ale_sign_column_always = 1
 " Keyboard shortcuts
 nmap <C-s>s <Plug>(ale_toggle)
 nmap <C-s>j <Plug>(ale_next_wrap)
