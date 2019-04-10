@@ -19,5 +19,6 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/mfukar/robotframework-vim'
 Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
 Plug '~/.fzf'
 call plug#end()
