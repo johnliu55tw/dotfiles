@@ -31,3 +31,10 @@ source $HOME/scripts/git-completion.bash
 export GIT_PROMPT_ONLY_IN_REPO=1
 export GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ] && source "$HOME/.bash-git-prompt/gitprompt.sh"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
