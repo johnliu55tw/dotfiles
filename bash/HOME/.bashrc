@@ -15,7 +15,7 @@ alias mv='mv -iv'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR="nvim"
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export TERM="screen-256color"
 
 # Start keychain
