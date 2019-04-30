@@ -27,6 +27,9 @@ source $HOME/scripts/git-completion.bash
 # fzf
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
 
+# bd
+alias bd='. bd -si'
+
 # bash-git-prompt
 export GIT_PROMPT_ONLY_IN_REPO=1
 export GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
