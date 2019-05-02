@@ -57,10 +57,9 @@ nmap <C-s>r <Plug>(ale_reset)
 
 " Buffer management shortcuts
 set hidden
-nmap <C-n><C-n> :bnext<CR>
-nmap <C-n>n :bnext<CR>
-nmap <C-n>p :bprevious<CR>
-nmap <C-n>q :bwipeout<CR>
+nmap <C-m> :bnext<CR>
+nmap <C-n> :bprevious<CR>
+nmap <C-q> :bwipeout<CR>
 
 " Easy Motion
 let g:EasyMotion_do_mapping = 0 " Disable defautl mappings
