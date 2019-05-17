@@ -8,8 +8,9 @@ syntax on
 
 colorscheme kalisi
 set background=dark
-" Highlight the 81st column
-let &colorcolumn=81
+" Highlight columns
+let &colorcolumn="80,100"
+highlight ColorColumn guibg=#8693AB
 " Set the leader key to z
 let mapleader='z'
 
