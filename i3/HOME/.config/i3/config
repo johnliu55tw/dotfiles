@@ -3,6 +3,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $lock_cmd /usr/bin/i3lock -n -e -i $HOME/.config/wallpaper
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -147,10 +148,10 @@ bar {
 }
 
 # Background images
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/arch.png
+exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpaper
 
 # Lock screen shortcut
-bindsym $mod+Shift+s exec "i3lock -c 000000"
+bindsym $mod+Shift+s exec $lock_cmd
 
 # Multimedia shortcuts
 # Brightness
@@ -173,6 +174,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id redshift-gtk
 # dunst
 exec --no-startup-id dunst
+# xss-lock
+exec --no-startup-id xss-lock -- $lock_cmd
 
 # Disable title bar
 for_window [class="^.*"] border pixel 2
