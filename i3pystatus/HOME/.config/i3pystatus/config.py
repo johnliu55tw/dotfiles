@@ -45,9 +45,8 @@ status.register("battery",
 
 # Note: requires both netifaces and basiciw (for essid and quality)
 status.register("network",
-    interface="wlan0",
     format_up="📶{essid} {quality:03.0f}%",
-    on_leftclick="st -e connmanctl")
+    on_leftclick="alacritty -e connmanctl")
 
 # Pomodoro plugin
 status.register("pomodoro",
