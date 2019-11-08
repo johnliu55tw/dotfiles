@@ -4,6 +4,7 @@
 
 set $mod Mod1
 set $lock_cmd /usr/bin/i3lock -n -e -i $HOME/.config/wallpaper
+set $screenshot_cmd flameshot gui
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -163,6 +164,10 @@ bindsym XF86AudioMicMute exec "pamixer --source 1 -t"
 bindsym XF86AudioLowerVolume exec "pamixer -d 5"
 bindsym XF86AudioRaiseVolume exec "pamixer -i 5"
 
+# Screenshot using flameshot
+bindsym $mod+Shift+p exec $screenshot_cmd
+bindsym Print exec $screenshot_cmd
+
 # Autorun
 # Keyboard input repeat speed
 exec_always --no-startup-id xset r rate 280 30
@@ -176,6 +181,8 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id dunst
 # xss-lock
 exec --no-startup-id xss-lock -- $lock_cmd
+# flameshot
+exec --no-startup-id flameshot
 
 # Disable title bar
 for_window [class="^.*"] border pixel 2
