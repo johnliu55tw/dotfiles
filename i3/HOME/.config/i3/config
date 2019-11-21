@@ -184,6 +184,9 @@ exec --no-startup-id xss-lock -- $lock_cmd
 # flameshot
 exec --no-startup-id flameshot
 
+# Put Spotify in workspace 10
+for_window [class="Spotify"] move to workspace 10
+
 # Disable title bar
 for_window [class="^.*"] border pixel 2
 
