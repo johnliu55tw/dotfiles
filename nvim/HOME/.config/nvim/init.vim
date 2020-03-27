@@ -1,6 +1,11 @@
 " Load the plugins installed by vim-plug
 source $HOME/.config/nvim/init-plug.vim
 
+" nvim starts slow for *.py files
+" See https://github.com/neovim/neovim/issues/2437
+let g:python_host_prog  = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
+
 set nu
 set ruler
 set termguicolors
