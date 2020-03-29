@@ -6,10 +6,15 @@ source $HOME/.config/nvim/init-plug.vim
 let g:python_host_prog  = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
+"General settings
 set nu
 set ruler
 set termguicolors
 syntax on
+set inccommand=nosplit
+set lazyredraw
+set smartcase
+set ignorecase
 
 colorscheme kalisi
 set background=dark
