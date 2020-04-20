@@ -16,7 +16,6 @@ PS1='[\u@\h \W]\$ '
 
 export EDITOR="nvim"
 export PATH=$HOME/.local/bin:$PATH
-export TERM="screen-256color"
 
 # Start keychain
 eval $(keychain --eval --quiet id_rsa)
