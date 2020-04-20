@@ -16,7 +16,8 @@ set lazyredraw
 set smartcase
 set ignorecase
 
-colorscheme kalisi
+let g:gruvbox_italic=1
+colorscheme gruvbox
 set background=dark
 " Highlight columns
 let &colorcolumn="80,100"
@@ -37,7 +38,7 @@ vnoremap <Leader>P "+P
 " vim-airline
 "
 " theme
-let g:airline_theme='kalisi'
+let g:airline_theme='gruvbox'
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
