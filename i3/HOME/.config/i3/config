@@ -192,6 +192,13 @@ exec --no-startup-id flameshot
 # Put Spotify in workspace 10
 for_window [class="Spotify"] move to workspace 10
 
+# Make Microsoft Teams notification as float window and not stealing the focus
+for_window [title="Microsoft Teams Notification"] floating enable
+no_focus [title="Microsoft Teams Notification"]
+
+# Make File-roller window as float window
+for_window [class="File-roller"] floating enable
+
 # Disable title bar
 for_window [class="^.*"] border pixel 2
 
