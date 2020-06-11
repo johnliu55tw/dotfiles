@@ -23,4 +23,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug '~/.fzf'
 Plug 'sirtaj/vim-openscad'
 Plug 'morhetz/gruvbox'
+Plug 'https://github.com/vim-scripts/openscad.vim'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
