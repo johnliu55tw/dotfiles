@@ -20,7 +20,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+d exec --no-startup-id "rofi -show-icons -modi drun,window,ssh -show"
+bindsym $mod+d exec --no-startup-id "rofi -show"
 
 # change focus
 bindsym $mod+h focus left
