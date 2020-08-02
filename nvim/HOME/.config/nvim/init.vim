@@ -63,6 +63,9 @@ set expandtab
 let g:ale_sign_column_always = 1
 " Set Rust linter to RLS
 let g:ale_linters = {'rust': ['rls']}
+" Use old warning message format of cppcheck
+" https://github.com/dense-analysis/ale/issues/2994
+let g:ale_c_cppcheck_options = '--enable=style --template=cppcheck1'
 " Keyboard shortcuts
 nmap <C-s>s <Plug>(ale_toggle)
 nmap <C-s>j <Plug>(ale_next_wrap)
