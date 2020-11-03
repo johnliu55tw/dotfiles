@@ -25,4 +25,7 @@ Plug 'sirtaj/vim-openscad'
 Plug 'morhetz/gruvbox'
 Plug 'https://github.com/vim-scripts/openscad.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'styled-components/vim-styled-components'
 call plug#end()
