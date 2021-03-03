@@ -66,9 +66,6 @@ let g:ale_linters = {'rust': ['rls']}
 " Use old warning message format of cppcheck
 " https://github.com/dense-analysis/ale/issues/2994
 let g:ale_c_cppcheck_options = '--enable=style --template=cppcheck1'
-" Use global eslint
-let g:ale_javascript_eslint_executable = 'eslint'
-let g:ale_javascript_eslint_use_global = 1
 " Keyboard shortcuts
 nmap <C-s>s <Plug>(ale_toggle)
 nmap <C-s>j <Plug>(ale_next_wrap)
