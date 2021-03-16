@@ -8,7 +8,6 @@ endif
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
-Plug 'https://github.com/myusuf3/numbers.vim.git'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'vim-airline/vim-airline'

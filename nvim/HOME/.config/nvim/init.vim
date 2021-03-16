@@ -1,6 +1,14 @@
 " Load the plugins installed by vim-plug
 source $HOME/.config/nvim/init-plug.vim
 
+" Toggle relative and absolute line number while switching mode and focus
+set number relativenumber
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " nvim starts slow for *.py files
 " See https://github.com/neovim/neovim/issues/2437
 let g:python_host_prog  = '/usr/bin/python2'
