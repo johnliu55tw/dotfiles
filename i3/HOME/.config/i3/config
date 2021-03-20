@@ -184,6 +184,8 @@ exec --no-startup-id dunst
 exec --no-startup-id xss-lock -- $lock_cmd
 # flameshot
 exec --no-startup-id flameshot
+# xbindkeys
+exec --no-startup-id xbindkeys
 
 # Put Spotify in workspace 10
 for_window [class="Spotify"] move to workspace 10
