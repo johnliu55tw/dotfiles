@@ -84,7 +84,7 @@ nmap <C-s>r <Plug>(ale_reset)
 set hidden
 nmap <C-m> :bnext<CR>
 nmap <C-n> :bprevious<CR>
-nmap <C-q> :bwipeout<CR>
+nmap <C-q> :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Easy Motion
 let g:EasyMotion_do_mapping = 0 " Disable defautl mappings
