@@ -25,4 +25,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
+Plug 'Shougo/deoplete.nvim'
+Plug 'ncm2/float-preview.nvim'
 call plug#end()

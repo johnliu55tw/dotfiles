@@ -23,6 +23,8 @@ set inccommand=nosplit
 set lazyredraw
 set smartcase
 set ignorecase
+set mouse=a
+set completeopt=menuone,longest
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
@@ -30,8 +32,9 @@ set background=dark
 " Highlight columns
 let &colorcolumn="80,100"
 highlight ColorColumn guibg=#8693AB
-" Set the leader key to z
-let mapleader='z'
+" Set the leader key to <Space>
+nnoremap <SPACE> <Nop>
+let mapleader=' '
 
 " " Copy to clipboard
 vnoremap <Leader>y  "+y
@@ -69,22 +72,30 @@ set expandtab
 " let g:ale_keep_list_window_open = 1
 " Keep the sign gutter open
 let g:ale_sign_column_always = 1
-" Set Rust linter to RLS
-let g:ale_linters = {'rust': ['rls']}
+" Set Linters
+let g:ale_linters = {'rust': ['rls'], 'python': ['pyls', 'flake8']}
+" Disable pyls linter because I want ALE + flake8 for linting
+let g:ale_python_pyls_config = {
+\   'pyls': {'plugins': {'pyflakes': {'enabled': 0}, 'pycodestyle': {'enabled': 0}}}}
 " Use old warning message format of cppcheck
 " https://github.com/dense-analysis/ale/issues/2994
 let g:ale_c_cppcheck_options = '--enable=style --template=cppcheck1'
-" Keyboard shortcuts
-nmap <C-s>s <Plug>(ale_toggle)
-nmap <C-s>j <Plug>(ale_next_wrap)
-nmap <C-s>k <Plug>(ale_previous_wrap)
-nmap <C-s>r <Plug>(ale_reset)
+" Keyboard shortcuts for linter
+nmap <Leader>ss <Plug>(ale_toggle)
+nmap <Leader>sj <Plug>(ale_next_wrap)
+nmap <Leader>sk <Plug>(ale_previous_wrap)
+" Go to definitaion and Find reference
+nmap <Leader>d :ALEGoToDefinition<CR>
+nmap <Leader>r :ALEFindReferences<CR>
+
+" Start deoplate at startup
+let g:deoplete#enable_at_startup = 1
 
 " Buffer management shortcuts
 set hidden
-nmap <C-m> :bnext<CR>
-nmap <C-n> :bprevious<CR>
-nmap <C-q> :bp<bar>sp<bar>bn<bar>bd<CR>
+map <C-m> :bnext<CR>
+map <C-n> :bprevious<CR>
+map <C-q> :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Easy Motion
 let g:EasyMotion_do_mapping = 0 " Disable defautl mappings
