@@ -25,6 +25,7 @@ set smartcase
 set ignorecase
 set mouse=a
 set completeopt=menuone,longest
+set signcolumn=yes
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
