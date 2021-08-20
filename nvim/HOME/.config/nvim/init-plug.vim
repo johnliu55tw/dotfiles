@@ -6,7 +6,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
