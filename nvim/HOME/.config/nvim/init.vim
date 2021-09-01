@@ -74,10 +74,8 @@ set expandtab
 " Keep the sign gutter open
 let g:ale_sign_column_always = 1
 " Set Linters
-let g:ale_linters = {'rust': ['rls'], 'python': ['pyls', 'flake8']}
-" Disable pyls linter because I want ALE + flake8 for linting
-let g:ale_python_pyls_config = {
-\   'pyls': {'plugins': {'pyflakes': {'enabled': 0}, 'pycodestyle': {'enabled': 0}}}}
+let g:ale_linters = {'rust': ['rls'], 'python': ['flake8', 'jedils']}
+let g:ale_python_jedils_executable = 'jedi-language-server'
 " Use old warning message format of cppcheck
 " https://github.com/dense-analysis/ale/issues/2994
 let g:ale_c_cppcheck_options = '--enable=style --template=cppcheck1'
@@ -132,3 +130,6 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 
 " FZF
 nnoremap <C-p> :FZF<CR>
+
+" vim-go
+let g:go_gocode_autobuild = 0
