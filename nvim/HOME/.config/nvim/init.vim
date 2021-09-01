@@ -24,8 +24,6 @@ set lazyredraw
 set smartcase
 set ignorecase
 set mouse=a
-set completeopt=menuone,longest
-set signcolumn=yes
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
@@ -66,16 +64,20 @@ set shiftwidth=4
 set expandtab
 
 " ALE
-"
+set completeopt=menuone,noinsert,noselect
+set signcolumn=yes
 " Uncomment to enable quickfix
 " let g:ale_set_quickfix = 0
 " let g:ale_open_list = 1
 " let g:ale_keep_list_window_open = 1
+
+" Enable ALE auto completion
+let g:ale_completion_enabled = 1
 " Keep the sign gutter open
 let g:ale_sign_column_always = 1
 " Set Linters
-let g:ale_linters = {'rust': ['rls'], 'python': ['flake8', 'jedils']}
-let g:ale_python_jedils_executable = 'jedi-language-server'
+let g:ale_linters = {'rust': ['rls'], 'python': ['flake8', 'pylsp']}
+
 " Use old warning message format of cppcheck
 " https://github.com/dense-analysis/ale/issues/2994
 let g:ale_c_cppcheck_options = '--enable=style --template=cppcheck1'
