@@ -99,7 +99,8 @@ type = internal/backlight
 card = intel_backlight
 format-prefix = " "
 enable-scroll = true
-format-underline = ${colors.foreground}
+format-prefix-foreground = #f8ea8c
+format-underline = ${self.format-prefix-foreground}
 
 [module/cpu]
 type = internal/cpu
@@ -113,7 +114,7 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #046307
+format-prefix-foreground = #6acf65
 format-underline = ${self.format-prefix-foreground}
 label = %percentage_used%%
 
@@ -176,8 +177,10 @@ type = internal/pulseaudio
 use-ui-max = false
 
 format-volume = <label-volume>
-format-volume-underline = ${colors.foreground}
-label-volume =  %percentage%%
+format-volume-prefix = " "
+format-volume-prefix-foreground = #4cd7d0
+format-volume-underline = ${self.format-volume-prefix-foreground}
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 
@@ -214,7 +217,7 @@ animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon7/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 warn-temperature = 80
 
 format = <label>
