@@ -3,8 +3,21 @@
 # Terminate already running bar instances
 killall -q polybar
 
-echo "---" | tee -a /tmp/polybar.log
+# Find CPU temperature: labeled "Package id 0"
+for i in /sys/class/hwmon/hwmon*/temp*_input; do
+    label=$(cat "${i%_*}_label" 2>/dev/null)
+    
+    if [ "$label" == 'Package id 0' ]; then
+        CPU_TEMP_PATH=$i
+        break
+    fi
+done
 
-polybar bottom 2>&1 | tee -a /tmp/polybar.log & disown
-
-echo "Bars launched..."
+# Set up monitors
+if type "xrandr"; then
+  for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m CPU_TEMP_PATH=$CPU_TEMP_PATH polybar bottom &
+  done
+else
+  polybar --reload bottom & disown
+fi
