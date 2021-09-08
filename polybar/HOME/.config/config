@@ -161,13 +161,11 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = 
-date-alt = "%Y-%m-%d"
+date = "%Y-%m-%d"
 
-time = "%H:%M"
-time-alt = "%H:%M:%S"
+time = "%H:%M:%S"
 
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.foreground}
 
