@@ -42,13 +42,13 @@ window#waybar.solo {
     background-color: rgba(184, 64, 64, 1);
 }
 
-#mode, 
-#battery, 
-#cpu, 
-#memory, 
-#network, 
-#pulseaudio, 
-#idle_inhibitor, 
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
 #temperature,
 #custom-layout,
 #backlight {
@@ -72,3 +72,6 @@ window#waybar.solo {
     color: rgba(217, 216, 216, 1);
 }
 
+#tray {
+    margin-right: 6px;
+}

@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "cpu", "memory", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock"],
+    "modules-right": ["tray", "cpu", "memory", "backlight", "battery", "pulseaudio", "clock#date", "clock", "idle_inhibitor"],
     "sway/mode": {
         "format": " {}"
     },
@@ -61,19 +61,19 @@
     },
     "clock": {
         "interval": 5,
-        "format": "{:%H:%M:%S}",
+        "format": " {:%H:%M:%S}",
         "tooltip": false
     },
     "clock#date": {
-        "format": "{:%a %d %b w:%V}",
+        "format": " {:%a %m/%d W%V}",
         "tooltip": false
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": " {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -85,8 +85,8 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format": "{icon} {percent}%",
+        "format-icons": [""]
     },
     "battery": {
         "states": {
@@ -94,7 +94,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
+        "format": "{icon} {capacity}%",
         "format-charging": "",
         "format-plugged": "",
         "format-alt": "{capacity}% {time}",
@@ -112,8 +112,8 @@
         "format-alt": "{ifname} {essid} ({signalStrength}%)"
     },
     "pulseaudio": {
-        "format": "{volume} {icon}",
-        "format-alt": "{volume} {icon}",
+        "format": "{icon} {volume}",
+        "format-alt": "{icon} {volume}",
         "format-alt-click": "click-right",
         "format-muted": "",
         "format-icons": {
@@ -125,7 +125,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "scroll-step": 10,
+        "scroll-step": 5,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
         "tooltip": false
